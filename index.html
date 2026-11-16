@@ -1,42 +1,77 @@
-```html
+HTML
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ArduPilot 無人機開發與飛行測試日誌 | UAV Flight Log</title>
+  <title>ArduPilot 無人機開發與飛行測試日誌 | UAV Flight Lab</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
     <div class="nav-container">
       <a href="index.html" class="site-title">
-        UAV FLIGHT LAB <span class="badge">ARDUPILOT</span>
+        ⚡ UAV FLIGHT LAB <span class="badge">ARDUPILOT // H743</span>
       </a>
       <nav>
-        <a href="index.html">測試日誌列表</a>
+        <a href="index.html">遙測儀表板</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <h1>ArduPilot 無人機開發與飛行測試日誌</h1>
-      <p>系統化記錄無人機硬體架構、Mission Planner 地面站遙測數據（EKF、Vibe 震動值、GPS 鎖星狀態）以及實地飛行測試影音紀錄。</p>
+      <div class="telemetry-bar">
+        <span class="status-dot"></span> SYSTEM ONLINE &bull; EKF3: CONVERGED &bull; GPS: 3D FIXED &bull; VIBE: NOMINAL
+      </div>
+      <h1>ArduPilot 四軸無人機開發與飛行測試日誌</h1>
+      <p>整合 AI、控制、動力與結構四大模組，系統化記錄 F405 / H743 飛控焊接、Mission Planner 地面站遙測與戶外試飛實況。</p>
+      <div class="stats-row">
+        <div class="stat-box">
+          <span class="stat-label">FLIGHT CONTROLLER</span>
+          <span class="stat-value">F405 &rarr; H743</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">FIRMWARE</span>
+          <span class="stat-value">ArduCopter</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">TEST LOGS</span>
+          <span class="stat-value">2026.04 - 08</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-label">MEDIA ARCHIVE</span>
+          <span class="stat-value">8 VIDEOS / 2 PHOTOS</span>
+        </div>
+      </div>
     </section>
 
-    <div class="section-title">// FLIGHT & BENCH TEST LOGS</div>
+    <div class="section-title">// FLIGHT &amp; BENCH TEST LOGS (點擊卡片檢視完整紀錄)</div>
     <div class="card-grid">
       <div class="card">
-        <div class="card-meta">DATE: 2026-11-16 | STATUS: DISARMED / GPS FIXED</div>
-        <h2><a href="posts/2026-11-ardupilot-bench-test.html">ArduPilot 系統整合測試：地面站遙測檢查與首航實測紀錄</a></h2>
-        <p>完成飛控與地面站連線測試，確認 EKF 卡爾曼濾波器收斂、機體震動值（Vibe）處於安全區間且 GPS 成功定位（GPS Fixed），並彙整現場實測影音檔案。</p>
+        <div class="card-meta">LOG #01 &bull; DATE: 2026-04 ~ 2026-08 &bull; STATUS: COMPASS DEBUGGED</div>
+        <h2><a href="posts/2026-11-ardupilot-bench-test.html">四軸無人機開發全紀錄：從硬體焊接、ArduPilot 調參到戶外試飛</a></h2>
+        <p>完整記錄從零件採購（F405/H743 飛控、香菇頭圖傳天線、數傳模組）、熱縮專用膠電源補強、地面站解鎖前 EKF/Vibe 檢查到羅盤 Debug 二次試飛的完整歷程。</p>
         <div class="tag-list">
           <span class="tag">ArduPilot</span>
-          <span class="tag">Mission Planner</span>
-          <span class="tag">EKF & Vibe Check</span>
+          <span class="tag">H743 / F405</span>
+          <span class="tag">Compass Debug</span>
           <span class="tag">GPS Fixed</span>
-          <span class="tag">Field Test</span>
+          <span class="tag">Mission Planner</span>
+        </div>
+        <div class="card-footer">
+          <a href="posts/2026-11-ardupilot-bench-test.html" class="btn-tech">進入遙測與試飛報告 &rarr;</a>
+        </div>
+      </div>
+
+      <div class="card card-placeholder">
+        <div class="card-meta">LOG #02 &bull; STATUS: STANDBY / NEXT MISSION</div>
+        <h2>AI 視覺辨識與自主航線規劃模組（開發中...）</h2>
+        <p>預計整合機載運算單元與 ArduPilot Guided 模式，透過數傳鏈路進行即時目標追蹤與自動避障測試。</p>
+        <div class="tag-list">
+          <span class="tag">AI Vision</span>
+          <span class="tag">Autonomous</span>
+          <span class="tag">MAVLink</span>
         </div>
       </div>
     </div>
