@@ -1,17 +1,107 @@
-HTML
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>四軸無人機開發與 ArduPilot 試飛紀錄 | UAV Flight Lab</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    :root {
+      --bg-main: #060B19;
+      --bg-card: #0F172A;
+      --border-color: #1E293B;
+      --text-primary: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --accent-orange: #F97316;
+      --accent-blue: #38BDF8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-main);
+      background-image: radial-gradient(rgba(56, 189, 248, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
+      color: var(--text-primary);
+      font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif;
+      line-height: 1.75;
+    }
+    a { color: var(--accent-blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background-color: rgba(15, 23, 42, 0.9);
+      border-bottom: 1px solid rgba(56, 189, 248, 0.25);
+      padding: 1rem 1.5rem;
+    }
+    .nav-container {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .site-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .badge {
+      background: linear-gradient(135deg, #F97316, #EA580C);
+      color: #fff;
+      font-size: 0.72rem;
+      font-family: monospace;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+    main { max-width: 920px; margin: 2rem auto; padding: 0 1.5rem; }
+    article {
+      background-color: var(--bg-card);
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    .card-meta { font-family: monospace; font-size: 0.82rem; color: var(--accent-orange); margin-bottom: 0.5rem; }
+    article h1 { font-size: 1.8rem; margin-bottom: 0.8rem; color: #FFFFFF; }
+    article h2 {
+      font-size: 1.25rem;
+      color: var(--accent-blue);
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.35rem;
+    }
+    article p, article ul { margin-bottom: 1rem; color: var(--text-primary); }
+    article ul { padding-left: 1.5rem; }
+    .table-wrapper { overflow-x: auto; margin: 1rem 0 1.5rem 0; }
+    .spec-table { width: 100%; border-collapse: collapse; font-family: monospace; font-size: 0.88rem; }
+    .spec-table th, .spec-table td { border: 1px solid var(--border-color); padding: 0.75rem 1rem; text-align: left; }
+    .spec-table th { background-color: rgba(6, 11, 25, 0.85); color: var(--accent-blue); width: 28%; }
+    pre {
+      background-color: #050811;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      border-radius: 6px;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+    code { font-family: monospace; color: #38BDF8; font-size: 0.88rem; }
+    footer {
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-family: monospace;
+      padding: 2rem 1rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 3rem;
+    }
+  </style>
 </head>
 <body>
   <header>
     <div class="nav-container">
       <a href="../index.html" class="site-title">
-        UAV FLIGHT LAB <span class="badge">ARDUPILOT / H743</span>
+        ⚡ UAV FLIGHT LAB <span class="badge">ARDUPILOT // H743</span>
       </a>
       <nav>
         <a href="../index.html">&larr; 返回日誌列表</a>
