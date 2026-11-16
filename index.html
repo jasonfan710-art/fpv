@@ -1,0 +1,49 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ArduPilot 無人機開發與飛行測試日誌 | UAV Flight Log</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="site-title">
+        UAV FLIGHT LAB <span class="badge">ARDUPILOT</span>
+      </a>
+      <nav>
+        <a href="index.html">測試日誌列表</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>ArduPilot 無人機開發與飛行測試日誌</h1>
+      <p>系統化記錄無人機硬體架構、Mission Planner 地面站遙測數據（EKF、Vibe 震動值、GPS 鎖星狀態）以及實地飛行測試影音紀錄。</p>
+    </section>
+
+    <div class="section-title">// FLIGHT & BENCH TEST LOGS</div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-meta">DATE: 2026-11-16 | STATUS: DISARMED / GPS FIXED</div>
+        <h2><a href="posts/2026-11-ardupilot-bench-test.html">ArduPilot 系統整合測試：地面站遙測檢查與首航實測紀錄</a></h2>
+        <p>完成飛控與地面站連線測試，確認 EKF 卡爾曼濾波器收斂、機體震動值（Vibe）處於安全區間且 GPS 成功定位（GPS Fixed），並彙整現場實測影音檔案。</p>
+        <div class="tag-list">
+          <span class="tag">ArduPilot</span>
+          <span class="tag">Mission Planner</span>
+          <span class="tag">EKF & Vibe Check</span>
+          <span class="tag">GPS Fixed</span>
+          <span class="tag">Field Test</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>UAV Flight Lab &copy; 2026 | Always Verify EKF, Vibe &amp; GPS Fixed Before Arming.</p>
+  </footer>
+</body>
+</html>
